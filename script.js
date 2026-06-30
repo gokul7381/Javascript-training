@@ -318,3 +318,255 @@
 // Template String
     
     console.log(`${y1}${y2}`);
+
+// 29/06/26
+
+// Type Casting
+    
+    // 1. Implicit 
+
+            console.log(typeof("hello" + 12));
+
+        // String - string anything string
+
+            console.log("string type casting");
+            
+            console.log(typeof("hello" + "hello"));
+            console.log(typeof("hello" + 12));
+            console.log(typeof("hello" + true));
+            console.log(typeof("hello" + undefined));
+            console.log(typeof("hello" + null));
+
+            console.log(typeof("hello" + [1,2]));
+            console.log(typeof("hello" + {k:4}));
+
+        
+        // Number
+
+            console.log("number type casting");
+
+            console.log(typeof(12 + "hi"));
+            console.log(typeof(12 + 12));
+            console.log(typeof(12 + true));
+            console.log(typeof(12 + undefined));
+            console.log(typeof(12 + null));
+
+            console.log(typeof(12 + [1,2]));
+            console.log(typeof(12 + {h:5}));
+
+        // Boolean
+
+            console.log("boolean type casting");
+
+            console.log(typeof(true + "hello"));
+            console.log(typeof(true + 5));
+            console.log(typeof(true + true));
+            console.log(typeof(true + undefined));
+            console.log(typeof(true + null));
+
+            console.log(typeof(true + [1,2]));
+            console.log(typeof(true + {k:5}));
+
+
+
+    // 2. Explicit
+            
+        // Constractor - Number
+
+            console.log(11 + Number("11"));
+
+            console.log(Number());
+            console.log(Number(""));
+            console.log(Number("hi"));
+            console.log(Number("1234"));
+            console.log(Number(1));
+            console.log(Number(true));
+            console.log(Number(false));
+            console.log(Number(undefined));
+            console.log(Number(null));
+            console.log(Number([123,67]));
+            console.log(Number({j:8}));
+            
+
+        // Boolean constractor
+
+            console.log(Boolean());
+            console.log(Boolean(""));
+            console.log(Boolean("abc"));
+            console.log(Boolean("1234"));
+            console.log(Boolean(0));
+            console.log(Boolean(-1));
+            console. log(Boolean(778));
+            console.log(Boolean(true));
+            console.log(Boolean(false));
+            console.log(Boolean(undefined));
+            console.log(Boolean(null));
+
+            console. log(Boolean([1,2]));
+            console.log(Boolean({h:4}));
+
+
+// Flow Control Statement
+
+    // 1. Conditional Statement 
+
+        // if Statement 
+
+         //if(condition){Statement}
+
+         // if inside you gave the condition if true = allow code, 
+         // condition if false = not allow inside
+
+            if(!5){
+               console.log("welcome");
+            }
+               console.log("hello everyone");
+
+    // if else statement
+
+        // if(condition){statement} else{statement}
+
+        // condition = true allow the code in if inside.
+        // condition = false allow the code in else inside.
+        
+            let voteAge = 17
+                if(voteAge>=18){
+                    console.log("we can vote");
+                }
+                else{
+                    console.log("we can't vote");
+                }
+    
+    // else if statement 
+        
+        let hour = 28
+            if(hour>=1 && hour <= 6){
+                console.log("early morning");
+            }
+            else if(hour >=7 && hour <= 12){
+                console.log("good morning");
+            }
+            else if(hour >= 13 && hour <= 16){
+                console.log("good afternoon");
+            }
+            else if(hour >= 17 && hour <= 19){
+                console.log("good evening");
+            }
+            else if(hour >= 20 && hour <= 24){
+                console.log("good night");
+            }
+            else{
+                console.log("time invalid");
+                }
+
+    // Nested if statement
+    // Army selection application
+
+        let age = prompt("enter your age")
+        let height = prompt("enter your height givecm value")
+        let weight = prompt("enter your weight givekg value")
+
+            if(age>=18){
+                if(height >= 175){
+                    if(weight >= 75){
+                        console.log("your selected congradulation");
+                    }
+                    else{
+                        console.log("your weight is not enough");
+                    }
+                }
+                else{
+                    console.log("your height is not enough");
+                }
+            }
+            else{
+                console.log("your age is not enough");
+                
+            }
+
+
+    // Switch statement
+
+        // switch (condition){ 
+        //  case value: statement 
+        //      break; 
+        //  default: statement   
+        //      break;
+        //  }
+
+        let dayNumber = 50
+            switch(dayNumber) {
+                case 1 : console.log("monday"); break;
+                case 2 : console.log("tuesday"); break;
+                case 3 : console.log("wednesday"); break;
+                case 4 : console.log("thursaday"); break;
+                case 5 : console.log("friday"); break;
+                case 6 : console.log("saturday"); break;
+                case 7 : console.log("sunday"); break;
+
+                default: console.log("check your number");
+
+                }
+
+
+    // 2. Looping statement 
+
+        // for loop
+            // for(intialization ; condition ; iteration){
+            //    statement
+            // }
+
+            for(let a=1; a <= 5; a++){
+            console.log("for loop",a); // 1, 2 ,3, 4,5
+            }
+            // a =1;1 <= 5 = true ; 1++= 2
+            // a = 2 ;2 <= 5 = true ; 2++ = 3
+            // a = 3;3 <= 5 = true ; 3++ = 4
+            // a = 4; 4 <= 5 = true ; 4++ = 5
+            // a =5;5 <= 5 = true ; 5++ = 6
+            // a = 6 ; 6 <= 5 = false.
+
+
+        // while loop
+
+            let val1 = 5        // 5 // 4 // 3 // 2 // 1 // 0 // -1
+                while(val1 >= 10){ //-1 >= 0, = false
+                    console.log("while loop" ,val1); // 5 , 4 , 3 , 2 , 1 , 0
+                    val1--; // 5 -- = 4, 4 -- = 3 , 3 -- = 2 , 2 -- = 1, 1 -- = 0, 0 --= - 1
+                }
+
+
+        // do while loop 
+
+            let val2 = 5
+
+                do{
+                    console.log("do while ",val2);
+                    val2--;
+                }
+                while(va12>=10)
+
+        // for of loop - string , array , function
+
+        //  for(declration of variable){
+        //     console.log(declration name);
+
+            let str = "javascript"
+            let arr = ["hello","hi","welcome","namaste"]
+
+                for(let a of arr){
+                    console.log(a);
+                }
+
+        // for in loop - object
+
+            let obj = {
+                name1 : "kamal",
+                role : "trainer",
+                sub : "react js"
+            }
+
+                for(let b in obj){
+                    console. log(b , obj[b]);
+                }
+                
