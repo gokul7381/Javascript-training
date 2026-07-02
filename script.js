@@ -570,3 +570,195 @@
                     console. log(b , obj[b]);
                 }
                 
+
+
+// 01/07/26
+
+// function
+
+//syntax
+    function functionName(parameters) {
+        statement
+        return
+        yield
+    }
+
+//example
+    //1.
+     function one() {
+        console.log("hello");
+    }
+
+    //2.
+    function two() {
+        console.log("hi");
+    
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        if(true) {
+            console.log("welcome");
+        }
+    }
+
+    //3.
+    function three(a,b,c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    three("javascript", "python", "java")
+
+
+    //4.
+    function clgform(name, department, cgpa) {
+        console.log("Name: ", name);
+        console.log("Department: ", department);
+        console.log("CGPA: ", cgpa);
+    }
+
+    clgform("kamal", "computer science", 8.5);
+    clgform("sita", "information technology", 9.2);
+
+    //5.
+    let employeeDetails = {
+        name1 : "kamal",
+        department : "computer science",
+        cgpa : 8.5
+    }
+
+    function four(){
+        console.log(employeeDetails.name1);
+    }
+        
+
+// Types of function
+
+    // 1. Named function
+        function named(parameter){
+            console.log(parameter);
+        }
+
+        named("Named function");
+
+    // 2. Anonymous function
+        let anonymous = function(parameter){
+            console.log(parameter);
+        }
+        anonymous("Anonymous function");
+
+    // 3. Arrow function
+        let arrow = (parameter) => {
+            console.log(parameter);
+        }
+        arrow("arrow function");
+
+
+
+// Scope
+
+    //var - global scope
+    //let - block scope
+    //const - block scope
+
+    function scopecheck() {
+        if (true) {
+            var g1 = "global scope";
+            let g2 = "block scope";
+            const g3 = "block scope";
+        
+                console.log(g2);
+                console.log(g3);
+        }
+        console.log(g1);
+
+    }
+
+    scopecheck()
+
+
+
+// hositing
+
+    var x = 5;
+        console.log(x);
+    
+    let y = 10;
+        console.log(y);
+    
+    const z = 15;
+        console.log(z);
+
+    
+
+// IIFE - Self invoke function
+
+    (function(parameter) {
+        alert(`sale going on ${dress}, discount offer ${discount}%`);
+
+    })("jeans", 20);
+
+
+// HigherOrder Function  ,  Callback Function
+
+    function function1(){
+        console.log("higherorder function");
+    }
+    function1(function2())
+
+
+
+// generator function
+
+    function* gen() {
+        yield "10% cashback";
+        yield "20% cashback";
+        yield "30% cashback";
+        yield "40% cashback";
+        yield "better luck next time";
+    }   
+
+    let genval = gen()
+
+    console.log(genval.next().value);
+    console.log(genval.next().value);
+    console.log(genval.next().value);
+    console.log(genval.next().value);
+    console.log(genval.next().value);
+
+    if(genval.next().done) {
+        console.log("no more offers");
+    }               
+
+
+
+// return
+
+    function five() {
+        console.log("return value");
+        return ("return value");
+    }
+    five();
+
+    function six() {
+        console.log("return value");
+        return ("return value");
+    }
+    six();
+
+
+
+
+
+// uncurrying stracture
+
+    function uncurrying(a) {
+        return function(b) {
+            return function(c) {
+                console.log(a + b + c);
+            };
+        };
+    }
+
+
+
