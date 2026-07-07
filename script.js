@@ -762,3 +762,243 @@
 
 
 
+// 6/7/26
+
+// Data structure
+
+    // Spread operator
+
+        // array spread operator
+            //[...]
+
+        //example
+
+            let arr1 = [1,2,3,4]
+            let arr2 = [5,6,7,8]
+
+            let totalArr = [...arr1,...arr2]
+                console.log(totalArr);
+
+        // object spread operator
+
+            //{...}
+
+            let obj1 = {
+                name1 : "a",
+                role : "traniee",
+                salary : 100000
+
+            }
+
+               let obj1 = {
+                name1 : "b",
+                role : "developer",
+                salary : 400000
+
+            }
+
+            let totalobj = {...obj1,...obj2}
+                console.log(totalobj);
+
+
+        // rest operator
+
+            // (...)
+
+                function a3(...a){
+                    console.log(a[5]+ a[1]);
+                    console.log(b);
+                }
+
+                a3(1,2,3,4,5,6,7,8,9,)
+
+
+    // Destracture
+
+        // array Destracture
+
+            let a4 = [1,2,3,4]
+
+            let b1 = a4[0]
+            let b2 = a4[1]
+            let b3 = a4[2]
+            let b4 = a4[3]
+
+                console.log(b1 + b2 + b3 + b4);
+
+        // destracture
+            
+            let [c1,c2,c3,c4] = a4
+                console.log(c1 + c2 + c3 + c4);
+
+        
+        
+        // Nested array
+
+            let a5 = [1,2,3,[4,5,6,[7,8,[9]]]]
+
+            let d1 = a5[0]
+            let d2 = a5[1]
+            let d3 = a5[2]
+            let d4 = a5[3][0]
+            let d5 = a5[3][1]
+            let d6 = a5[3][2]
+            let d7 = a5[3][3][0]
+            let d8 = a5[3][3][1]
+            let d9 = a5[3][3][2][0]
+
+                console.log(d1,d2,d3,d4,d5,d6,d7,d8,d9);
+
+            let [e1,e2,e3,[e4,e5,e6,[e7,e8,[e9]]]]
+
+                console.log(e1,e2,e3,e4,e5,e6,e7,e8,e9);
+
+        // object destracture
+
+            let obj = {
+                name2 : "john",
+                role : "devops",
+                salary : 70000
+            }
+
+            let g1 = obj.name2
+            let g2 = obj.role
+            let g3 = obj.salary
+
+                console.log(g1,g2,g3);
+
+            let {name2 , role , salary} = obj
+
+                console.log(name2 ,role ,salary);
+
+
+        // array advance concept
+
+            let arr = [1,2,3,4]
+                console.log(arr);
+                console.log(arr[0]);
+                console.log(arr[arr.length-1]);
+
+        // homogenious
+
+            let arr = [1,2,3,4]  // same type of values can be stored
+                let arr = [1,2,3,4,5,6,7,8]
+
+        // hetrogenious
+
+             let arr = [1,2,3,4] // different types of values can be stored 
+                let arr = [1,2,3,4,"hello",true,undefined,null,[3,4],{k:5}]
+
+        // flexible
+
+            // adding method - you can add multiplr value.
+            // remove method - you can remove single
+
+
+        // array manipulation
+            
+            let ab = [1,2,3]
+            // 1.push()
+            // we can add the value array last side - add
+                ab.push(4,5,6)
+
+
+            // 2.pop()
+            //we can remove the value array last side - rm
+                ab.pop()
+
+
+            // 3.shift()
+            //we can remove the value array first side - rm
+                ab.shift()
+
+
+            // 4.unshift()
+            // we can add the value array first side - add
+                ab.unshift(0,1)
+
+                    console.log(ab);
+
+                
+            // 5.splice()         
+            //(// starting index , // delete count, //adding value)
+
+                let h1 = [1,2,3,40,50,60,7,8,9,10]
+
+                    h1.splice(3,3,4,5,6)
+                        console.log(h1);
+
+
+
+            // array merge method
+
+
+            // concat
+
+            let ar1 = [1,2,3,4]
+            let ar2 = [5,6,7,8]
+
+            let totalAr = ar1.concat(ar2)
+                console.log(totlAr);
+
+            
+            // slice 
+
+            let ad1 = [1,2,3,40,50,60,7,8,9,10]
+
+            let sliceval1 = ad1.slice(3,6) // si ,ei + 1
+                console.log(sliceval1);
+
+
+            // fill 
+
+            let ad2 = [1,2,3,4] // 1,2,3, "four"
+
+            ad1.fill("four",3,4) // value , si , ei + 1
+
+            console.log(ad2);
+
+            // includes
+
+            let ad3 = [5,665,3,23,776,54,2,1]
+
+            let includes1 = ad3.includes(5)
+
+            console.log(includes1);
+
+
+            // indexOf ()
+
+            let ad4 = [1,2,3,4,5,4,3,2,1]
+
+            let indexOf1 = ad4.indexOf(3,3)  // "value","from index"
+
+            console.log(indexOf1);
+
+
+            //lastIndexOf()
+
+            let lastIndexOf1 = ad4.lastIndexOf(3,5)
+            console.log(lastIndexOf1);
+
+            // sort()
+
+            let add6 = [2,3,9,1,7,8]
+
+            let sort1 = add6.sort()
+
+            console.log(sort1);
+
+            //reverse()
+               console.log(sort1.reverse());
+
+            // flat 
+
+            let ad7 = [1,2,[4,5,[7,8,[9]]]]
+
+            console.log(ad7.flat(Infinity));
+        
+        
+// higher order method 
+
+// higher order method types
