@@ -998,7 +998,243 @@
 
             console.log(ad7.flat(Infinity));
         
-        
-// higher order method 
 
-// higher order method types
+            
+// 8/7/26
+
+// Araay higher order method 
+
+    let games = ["COD","PUBG","COC","FF","NFS"]
+
+    function one(){
+        console.log("1");
+    }
+
+    function two(){
+        console.log("2");
+    }
+    one(two())
+
+
+    // forEach()
+
+        let newForeach = games.forEach((currentElement,indexNumber,TotalArray)=>{
+            return(currentElement);
+
+        })
+
+            console.log(newForeach);
+        
+
+    // map()
+
+        let newmap = games.map((c,i,t)=>{
+            return(c);
+        })
+        
+            console.log(newmap);
+
+
+    // filter()
+
+        let employee = [
+            {name : "a" , salary : 130000},
+            {name : "b" , salary : 500000},
+            {name : "c" , salary : 130000},
+            {name : "d" , salary : 290000},
+            {name : "e" , salary : 150000},
+        ]
+            employee.filter((c,i,t)=>{
+                
+                return c.salary <= 150000
+
+            })
+            
+            console.log(newfilter);
+            
+
+    // find()
+        
+        let newFind = employee.find((c,i,t)=> {
+
+            return c.salary <= 150000;
+
+        })
+
+            console.log(newFind);
+
+            employee = [
+            {name : "a" , salary : 130000},
+            {name : "b" , salary : 500000},
+            {name : "c" , salary : 130000},
+            {name : "d" , salary : 290000},
+            {name : "e" , salary : 150000},
+        ];
+
+
+    // reduce()
+
+        let newReduce = employee.reduce((acc,c,i,t)=>{
+            return acc + c.salary 
+            
+            //      o  + 13 = 13
+            //      13 + 58 = 71
+            //      71 + 13 = 84
+            //      84 + 29 = 113
+            //      113 + 15 = 128
+            //      128 + null = 128
+
+        },0)  // 13 // 71 // 84 // 113 // 128
+
+        console.log(newReduce);
+
+    //some() - or
+    
+    let some1 = [1,2,3,4]
+
+    let someval = some1.some((c,i,t)=>{
+        return c % 2 == 0
+            // 1 % 2 == 0 false
+            // 2 % 2 == 0 true
+            // 3 % 2 == 0 false 
+            // 4 % 2 == 0 true
+
+            // false || true || false || true
+    })
+        console.log(someval);
+         
+
+    //every() - and
+
+        let every1 = [2,2,2,2]
+
+        let everyval = every1.every((c,i,t)=>{
+
+            return i % 2 == 0
+
+            // 0 % 2 == 0 true
+            // 1 % 2 == 0 false
+
+        })
+            console.log(everyval);
+
+    // sort()
+
+        let aa = [1,34,2,678,986,22,1435]
+
+        let sortval = aa.sort((a,b)=>{
+        
+            return a - b  // ascending 
+            // return b - a  // descending 
+        
+        })
+
+            console.log(sortval);
+            
+
+// arr to str 
+
+    // toString()
+
+        let ab1 = [1,2,3]
+
+            console.log(ab1.toString());
+
+
+    // join()
+    
+        console.log(ab1.join("hello"));
+
+
+    // sort()
+
+        let aa = [1,34,2,678,22,1435]
+
+        let sortval = aa.sort((a,b)=>{
+            return a - b 
+        })
+
+            console.log(sortval);
+
+
+// string advance concept 
+
+        let str = "javascript"
+
+    //charAt(),     index  -- > value 
+
+        console.log(str.charAt(3));
+        
+    // charCodeAt()  index  -- > asscii value
+
+        console.log(str.charCodeAt(0));
+        
+    // length()     
+
+        console.log(str.length);
+        
+    // slice()  
+
+    str = "javascript";
+    
+        console.log(str.slice(2, 5));
+        
+    // toUpperCase()
+
+      str = "Javascript";
+
+        console.log(str.toUpperCase());
+        
+    // toLowerCase()
+    
+        console.log(str.toLowerCase());
+
+    // trim()
+    
+        str = " javascript ";
+
+            console.log(str.trim()[0]);
+            console.log(str.trimStart());
+           console.log(str.trimEnd());
+    
+    
+    // indexOf()
+
+        str = "javascript";
+
+        console.log(str.indexOf("a",2)); // v , fI
+
+    // lastIndexof()
+
+        console.log(str.lastIndexOf("a",7));  
+        
+    // replace()
+
+        str = "javascript";
+
+            console.log(str.replace("java","python"));   //java   ,   // python 
+            console.log(str.replaceAll("java","python"));   //java   ,   // python 
+            
+
+    // includes()
+ 
+         str = "javascript";
+
+            console.log(str.includes("J"));
+            
+    // startsWith()
+
+            console.log(str.startsWith("J"));
+            
+    // endsWith()
+
+            console.log(str.endsWith("t"));
+            
+    // split()
+        
+        str = "java-script";
+            
+            console.log(str.split("s"));
+            
+            
+        
