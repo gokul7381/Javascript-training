@@ -1238,3 +1238,190 @@
             
             
         
+// 9/7/26
+
+
+// date constructor
+
+    // Date()
+        
+        let data1 = new Date()
+            console.log(data1);
+
+    // get()
+
+        // getfullyear()
+
+        console.log(data1.getFullYear());
+
+        // getMonth()
+
+        console.log(data1.getMonth());
+
+        //getDate()
+
+        console.log(data1.getDate());
+
+        // getDay()
+
+        console.log(data1.getDay())
+
+        // getHours()
+
+        console.log(data1.getHours());
+
+        //getMinutes()
+
+        console.log(data1.getMinutes());
+
+        // getSeconds()
+         
+        console.log(data1.getSeconds());
+
+
+
+    // local data
+
+        // time()
+
+        console.log(data1.toLocaleTimeString());
+
+        //date()
+
+        console.log(data1.toLocaleDateString());
+
+        //both()
+
+        console.log(data1.toLocaleString());
+
+
+    // set()
+
+        let data2 = new Date()
+            console.log(data2);
+        
+        // setFullYear()
+
+        data2.setFullYear(2003)
+        console.log(data2);
+
+        // setMonth()
+
+        data2.setMonth(0)
+        console.log(data2);
+        
+        // setDate()
+        
+        data2.setDate(30)
+        console.log(data2);
+
+        // setHours()
+
+        data2.setHours(12)
+        console.log(data2);
+
+        // setMinutes()
+
+        data2.setMinutes(12)
+        console.log(data2);
+
+        // setSeconds()
+
+        data2.setSeconds(12)
+        console.log(data2);
+
+       // timezone
+
+        console.log(data1.toLocaleString("en-IN", {
+        timeZone: "America/New_York",
+        }));
+
+
+        // Birthday Finder
+
+        let year = prompt ("Enter Your Birthday Year :")
+        let month = prompt ("Enter Your Birthday Month")
+        let date = prompt ("Enter your Birthday Date")
+
+        let dd1 = new Date()
+
+        dd1.setFullYear(year)
+        dd1.setMonth(month-1)
+        dd1.setDate(date)
+        
+        let day = dd1.getDay()
+
+        let dayName = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+        console.log(dayName[day]);
+
+
+
+
+// Asynchronous
+
+   // setTimeOut()
+
+        setTimeout(()=>{
+        console.log("welcome");
+
+        },5000)
+
+        setTimeout(()=>{
+        console.log("batch36");
+
+        },2000)
+
+    // setInterval()
+
+        setInterval(()=>{
+       let clock = new Date()
+
+       console.log(clock.toLocaleTimeString());
+
+        },1000)
+
+        
+        let hh = setInterval (() =>{
+            clearInterval(hh)
+        },5000)
+
+
+    // promise ()
+
+        // API - Application Programmable Interface
+
+        // fetch()
+
+        // resolve state         successfull data        .then()
+
+        // reject state          error data              .catch()
+
+        // bending state         coming data             .finally()
+        
+
+        let api = "https://fakestoreapi.com/products/"
+
+        fetch(api).then((data)=>{
+
+            return data.json()
+
+        })
+
+        .then((data1)=>{I
+            data1.forEach((c,i,t)=>{
+            console.log(c.title);
+            })
+        })
+
+
+        .catch((error)=>{
+
+            console.warn(error);
+            
+        })
+
+
+        .finally(()=>{
+            console.log("Api is working");
+            
+        })
